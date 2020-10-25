@@ -19,5 +19,18 @@ class MainActivity : AppCompatActivity() {
 
         }
 
+        sendDataBtn.setOnClickListener {
+
+//            다른 화면 (MySecondActivity) 으로 이동
+//            가는길에 데이터 (입력한 내용)를 들고 이동.
+
+            val inputContent = contentEdt.text.toString()
+
+            val myIntent = Intent(this, MySecondActivity::class.java) // 비행기 티켓
+            myIntent.putExtra("content", inputContent)
+            startActivity(myIntent) // 실제 탑승 행위
+
+        }
+
     }
 }
