@@ -14,11 +14,13 @@
         android:text="변경할 내용" />
 
     <EditText
+        android:id="@+id/newDataEdt"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="새로운 문구를 입력해주세요." />
 
     <Button
+        android:id="@+id/okBtn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="입력 완료" />
