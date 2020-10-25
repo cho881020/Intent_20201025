@@ -32,5 +32,10 @@ class MainActivity : AppCompatActivity() {
 
         }
 
+        changeTextBtn.setOnClickListener {
+            val myIntent = Intent(this, EditDataActivity::class.java)
+            startActivityForResult(myIntent, 1000)
+        }
+
     }
 }
