@@ -1,5 +1,6 @@
 package kr.co.tjoeun.intent_20201025
 
+import android.app.Activity
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -45,4 +46,21 @@ class MainActivity : AppCompatActivity() {
         }
 
     }
+
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+
+        if (requestCode == REQ_FOR_DATA) {
+
+            if (resultCode == Activity.RESULT_OK) {
+
+                val newInputData = data?.getStringExtra("newData")
+                dataTxt.text = newInputData
+
+            }
+
+        }
+
+    }
+
 }
