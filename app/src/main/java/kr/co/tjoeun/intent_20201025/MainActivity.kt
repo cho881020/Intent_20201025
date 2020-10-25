@@ -41,7 +41,10 @@ class MainActivity : AppCompatActivity() {
         }
 
         changeTextBtn.setOnClickListener {
+
+//            결과를 받으러 가도 Intent는 똑같다.
             val myIntent = Intent(this, EditDataActivity::class.java)
+//            결과를 받으러 이동하는 코드
             startActivityForResult(myIntent, REQ_FOR_DATA)
         }
 
