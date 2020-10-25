@@ -15,4 +15,17 @@
         android:layout_height="wrap_content"
         android:text="다른 화면으로 이동하기" />
 
+    <EditText
+        android:id="@+id/contentEdt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="여기에 적은 내용을 다음 화면에 전달합니다."
+        android:layout_marginTop="20dp"/>
+
+    <Button
+        android:id="@+id/sendDataBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="다른 화면에 데이터 전달하기" />
+
 </LinearLayout>
