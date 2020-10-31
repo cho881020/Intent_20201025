@@ -42,4 +42,20 @@
         android:layout_height="wrap_content"
         android:text="문구 변경하러 가기" />
 
+    <EditText
+        android:id="@+id/phoneEdt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="연결할 전화번호 입력"
+        android:layout_marginTop="15dp"
+        android:inputType="phone"
+        />
+
+    <Button
+        android:id="@+id/dialBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="전화걸기 (DIAL)" />
+
+
 </LinearLayout>
