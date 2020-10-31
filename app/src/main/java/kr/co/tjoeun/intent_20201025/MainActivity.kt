@@ -75,6 +75,17 @@ class MainActivity : AppCompatActivity() {
 
         }
 
+        smsBtn.setOnClickListener {
+            val inputPhoneNum = phoneEdt.text.toString()
+            val myUri = Uri.parse("smsto:${inputPhoneNum}")
+            val myIntent = Intent(Intent.ACTION_SENDTO, myUri)
+//            문자에 미리 내용을 담아두고 싶다! => 화면을 넘어갈때, 보여줄 문구를 담아주자!
+//            => putExtra 활용 (안드로이드팀이 정해둔 데이터이름표 : "sms_body")
+            myIntent.putExtra("sms_body", "[홍보문자] 미리 작성한 문구")
+            startActivity(myIntent)
+
+        }
+
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
